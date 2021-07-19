@@ -5,11 +5,11 @@ session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     if ( strcmp($_SESSION["user_type"] ,"admin") == 0) {
-        header("location: admin_welcome.php");
+        header("location: admin_pages/admin_welcome.php");
         exit;
        }
        else if ( strcmp($_SESSION["user_type"] ,"user") == 0) {
-        header("location: user_welcome.php");
+        header("location: user_pages/user_welcome.php");
          exit;
        }
 }
@@ -71,10 +71,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["email"] = $email;     
                             $_SESSION["user_type"] = $type;                       
                            if ( strcmp($_SESSION["user_type"] ,"admin") == 0) {
-                            header("location: admin_welcome.php");
+                            header("location: admin_pages/admin_welcome.php");
                            }
                          else if ( strcmp($_SESSION["user_type"] ,"user") == 0) {
-                            header("location: user_welcome.php");
+                            header("location: user_pages/user_welcome.php");
                            }
                         } else{
                             // Display an error message if password is not valid
