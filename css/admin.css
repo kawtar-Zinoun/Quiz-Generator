@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 body{ 
-    background: #cc2b5e;  /* fallback for old browsers */
+background: #cc2b5e;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 height: 100%; 
@@ -14,12 +14,29 @@ height: 100%;
      margin-top: auto;
      width: 100%;
 }
-.bar {
-    display:inline-flex; 
-    float:right; 
-    padding-right: 10px; 
-    padding-top: 10px; 
+.logout-section {
+  float: right !important;
+  margin-right: 10px;
+  flex-direction: row;
+  display: inline-flex;
+  padding-top: 10px;
 }
+.mynav {
+  display: inline-flex;
+  padding-top: 10px;
+}
+.mynav li {
+  padding-left: 10px ;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.mynav li:first-child {
+  margin-left: 30px;
+}
+.mynav li:hover{
+  background-color: #C67ACE;
+}
+
 .title {
     float: left;
     margin-left: 20px;
@@ -140,4 +157,14 @@ overflow: hidden;
   .cnx:focus {
     background-color: #cc2b5e;
 
+  }
+  .table {
+    width:50%;
+    align-self: center;
+    margin : auto;
+    background-color: white;
+    padding-left : 30px;
+  }
+  .table tbody td, .table thead tr th {
+    width:50%;
   }
